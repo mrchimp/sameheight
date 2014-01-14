@@ -1,0 +1,15 @@
+{
+  "name": "mrchimp/sameheight",
+  "version": "0.1.0",
+  "description": "jQuery plugin for matching heights of elements",
+  "keywords": ["jquery", "height"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jake Gully",
+      "email": "jake@mentalplayground.co.uk",
+      "homepage": "http://deviouschimp.co.uk",
+      "role": "Developer"
+    }
+  ]
+}
