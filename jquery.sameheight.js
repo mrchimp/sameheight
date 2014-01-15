@@ -10,7 +10,7 @@
       elems.height('auto');
 
       if (settings.autoHeightCondition()) {
-        elems.height('auto');
+        elems.height(settings.defaultHeight);
         return true;
       }
 
@@ -26,7 +26,8 @@
     var elems = this,
     settings = $.extend({
       calcOnResize: true,
-      autoHeightCondition: function() {}
+      autoHeightCondition: function() {},
+      defaultHeight: 'auto'
     }, options);
 
     calc();
