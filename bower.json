@@ -7,6 +7,6 @@
   },
   "ignore": [
     "index.html",
-    "readme.md",
+    "readme.md"
   ]
 }
