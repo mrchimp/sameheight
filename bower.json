@@ -1,0 +1,12 @@
+{
+  "name": "sameheight",
+  "version": "1.0.0",
+  "main": "jquery.sameheight.js",
+  "dependencies": {
+    "jquery": ""
+  },
+  "ignore": [
+    "index.html",
+    "readme.md",
+  ]
+}
