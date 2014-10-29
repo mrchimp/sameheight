@@ -1,9 +1,23 @@
 (function ( $ ) {
 
-  var elems;
+  // var elems;
 
-  $.fn.sameheight = function (options) {
+  $.fn.sameheight = function (input) {
     
+    var elems = this;
+        settings = {
+          calcOnResize: true,
+          autoHeightCondition: function() {},
+          defaultHeight: 'auto'
+        };
+
+    if (typeof input === 'string' && input === 'refresh') {
+      elems = $('.box');
+      calc();
+    } else if (typeof input === 'object') {
+      init(input);
+    }
+
     function calc() {
       var max = 0;
 
@@ -23,17 +37,14 @@
       elems.height(max);
     }
 
-    var elems = this,
-    settings = $.extend({
-      calcOnResize: true,
-      autoHeightCondition: function() {},
-      defaultHeight: 'auto'
-    }, options);
+    function init(options) {
+      settings = $.extend(settings, options);
 
-    calc();
+      calc();
 
-    if (settings.calcOnResize) {
-      $(window).resize(calc);
+      if (settings.calcOnResize) {
+        $(window).resize(calc);
+      }
     }
 
     return this;
