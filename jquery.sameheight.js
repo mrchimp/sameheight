@@ -14,7 +14,7 @@
     if (typeof input === 'string' && input === 'refresh') {
       elems = $('.box');
       calc();
-    } else if (typeof input === 'object') {
+    } else {
       init(input);
     }
 
